@@ -37,6 +37,7 @@ class App extends React.Component {
       input: ''
     };
     this.handleChange = this.handleChange.bind(this);
+    this.processText = this.processText.bind(this);
     }
 
     handleChange = (event) => {
