@@ -1,5 +1,6 @@
 import './App.css';
 import React from 'react';
+import DOMPurify from 'dompurify'
 // import defaultText from './defaultText';
 
 const initText = `Marked - Markdown Parser
@@ -25,10 +26,6 @@ That's it.  Pretty simple.  There's also a drop-down option in the upper right t
 `
 
 const marked = require ('marked');
-const createDomPurify = require('dompurify');
-const { JSDOM } = require('jsdom');
-const window = new JSDOM('').window;
-const DOMPurify = createDomPurify(window);
 
 class App extends React.Component {
   constructor(props) {
