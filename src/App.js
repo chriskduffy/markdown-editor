@@ -34,8 +34,8 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      input: ' ',
-      html: '<></>'
+      input: '',
+      html: ''
     };
     this.handleChange = this.handleChange.bind(this);
     this.processText = this.processText.bind(this);
@@ -52,7 +52,7 @@ class App extends React.Component {
     }
 
     componentDidMount() {
-      this.setState({ input: initText })
+      this.setState({ input: initText , html: this.processText() })
     }
 
     componentDidUpdate(prevProps, prevState){
