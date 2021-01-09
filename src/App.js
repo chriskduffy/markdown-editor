@@ -34,8 +34,8 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      input: '',
-      html: ''
+      input: ' ',
+      html: '<></>'
     };
     this.handleChange = this.handleChange.bind(this);
     this.processText = this.processText.bind(this);
@@ -73,11 +73,12 @@ class App extends React.Component {
           </div>
           <div id="previewArea">
             <div id="preview">
+            {console.log(this.state)}
             <div dangerouslySetInnerHTML={{__html: this.state.html }} />
             </div>
             <div id="raw-html-block">
               <h3>Raw HTML</h3>
-              <p id="raw-html">{this.state.html }</p>
+              <p id="raw-html">{ this.state.html }</p>
             </div>
           </div>
         </div>
